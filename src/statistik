@@ -1,0 +1,58 @@
+
+ALGORITMA StatistikSederhana
+
+DEKLARASI
+    n, ulang : integer
+    x, jumlah, jumlahKuadrat : real
+    maks, min, rentang : real
+    rataRata, variansi, deviasiStandar : real
+
+DESKRIPSI
+    DO
+        OUTPUT "Masukkan banyak data: "
+        INPUT n
+    WHILE (n <= 0)
+
+    ulang = 1
+    jumlah = 0
+    jumlahKuadrat = 0
+
+   \ DO
+        OUTPUT "Masukkan data ke-", ulang
+        INPUT x
+
+        jumlah = jumlah + x
+        jumlahKuadrat = jumlahKuadrat + x*x
+
+        IF ulang == 1 THEN
+            maks = x
+            min = x
+        ELSE
+            IF x > maks THEN
+                maks = x
+            ENDIF
+
+            IF x < min THEN
+                min = x
+            ENDIF
+        ENDIF
+
+        ulang = ulang + 1
+    WHILE (ulang <= n)
+
+    rentang = maks - min
+    rataRata = jumlah / n
+
+    variansi = (jumlahKuadrat -
+               n*rataRata*rataRata) / n
+
+    deviasiStandar = AKAR(variansi)
+
+    OUTPUT "Data terbesar = ", maks
+    OUTPUT "Data terkecil = ", min
+    OUTPUT "Rentang data = ", rentang
+    OUTPUT "Rata-rata = ", rataRata
+    OUTPUT "Variansi = ", variansi
+    OUTPUT "Deviasi standar = ", deviasiStandar
+
+SELESAI

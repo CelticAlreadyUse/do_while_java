@@ -1,0 +1,38 @@
+
+ALGORITMA AkarPersamaanKuadrat
+
+DEKLARASI
+    a, b, c, D, x1, x2, real, imajiner : real
+
+DESKRIPSI
+    INPUT a, b, c
+
+    IF a = 0 THEN
+        OUTPUT "Bukan persamaan kuadrat"
+
+    ELSE
+        D <- b*b - 4*a*c
+
+        IF D > 0 THEN
+            OUTPUT "Dua akar real berbeda"
+            x1 <- (-b + SQRT(D)) / (2*a)
+            x2 <- (-b - SQRT(D)) / (2*a)
+            OUTPUT x1, x2
+
+        ELSE IF D = 0 THEN
+            OUTPUT "Dua akar real kembar"
+            x1 <- -b / (2*a)
+            x2 <- x1
+            OUTPUT x1, x2
+
+        ELSE
+            OUTPUT "Dua akar kompleks"
+            real <- -b / (2*a)
+            imajiner <- SQRT(-D) / ABS(2*a)
+            OUTPUT "x1 = ", real, " + ", imajiner, "i"
+            OUTPUT "x2 = ", real, " - ", imajiner, "i"
+        ENDIF
+
+    ENDIF
+
+SELESAI

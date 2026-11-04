@@ -1,0 +1,18 @@
+
+ALGORITMA Looping3
+
+DEKLARASI
+    jumlah, bilangan : integer
+
+DESKRIPSI
+    jumlah = 0
+    bilangan = 5
+
+    DO
+        jumlah = jumlah + bilangan
+        bilangan = bilangan + 5
+    WHILE (bilangan <= 100)
+
+    OUTPUT "Jumlah = ", jumlah
+
+SELESAI

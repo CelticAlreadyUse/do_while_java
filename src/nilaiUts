@@ -1,0 +1,53 @@
+
+ALGORITMA NilaiFinalMahasiswa
+
+DEKLARASI
+    uts1, uts2, uas, nilaiTotal : real
+    nilaiFinal : character
+
+DESKRIPSI
+    DO
+        OUTPUT "Masukkan nilai UTS 1: "
+        INPUT uts1
+
+        IF uts1 < 0 THEN
+            OUTPUT "Nilai tidak boleh negatif"
+        ENDIF
+    WHILE (uts1 < 0)
+
+    DO
+        OUTPUT "Masukkan nilai UTS 2: "
+        INPUT uts2
+
+        IF uts2 < 0 THEN
+            OUTPUT "Nilai tidak boleh negatif"
+        ENDIF
+    WHILE (uts2 < 0)
+
+    DO
+        OUTPUT "Masukkan nilai UAS: "
+        INPUT uas
+
+        IF uas < 0 THEN
+            OUTPUT "Nilai tidak boleh negatif"
+        ENDIF
+    WHILE (uas < 0)
+
+    nilaiTotal = 0.3*uts1 + 0.3*uts2 + 0.4*uas
+
+    IF nilaiTotal >= 80 THEN
+        nilaiFinal = 'A'
+    ELSE IF nilaiTotal >= 65 THEN
+        nilaiFinal = 'B'
+    ELSE IF nilaiTotal >= 55 THEN
+        nilaiFinal = 'C'
+    ELSE IF nilaiTotal >= 50 THEN
+        nilaiFinal = 'D'
+    ELSE
+        nilaiFinal = 'E'
+    ENDIF
+
+    OUTPUT "Nilai total = ", nilaiTotal
+    OUTPUT "Nilai final = ", nilaiFinal
+
+SELESAI

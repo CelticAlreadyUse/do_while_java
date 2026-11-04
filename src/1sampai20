@@ -1,0 +1,15 @@
+
+ALGORITMA Looping2
+
+DEKLARASI
+    bilangan : integer
+
+DESKRIPSI
+    bilangan = 1
+
+    DO
+        OUTPUT bilangan tanpa pindah baris
+        bilangan = bilangan + 1
+    WHILE (bilangan <= 20)
+
+SELESAI
